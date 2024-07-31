@@ -39,6 +39,89 @@
   line-height: 1.75rem;
 }
 
+input {
+  font-size: 20px;
+  padding:6px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+all: unset; 
+min-width: 21px;
+min-height: 45px;
+margin: 17px;
+padding: 0px;
+background-image: 
+linear-gradient(to top, transparent 0px, transparent 16px, #fff 16px, #fff 26px, transparent 26px, transparent 35px, #000 35px,#000 36px,transparent 36px, transparent 40px),
+linear-gradient(to right, transparent 0px, transparent 10px, #000 10px, #000 11px, transparent 11px, transparent 21px);
+transform: rotate(90deg) scale(0.8, 0.9);
+cursor:pointer;
+}
+
+
+
+.carrinho,
+.finalizacao {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho h2,
+.finalizacao h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: var(--header-font-2);
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.carrinho p,
+.finalizacao p {
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.finalizacao input[type="text"],
+.finalizacao input[type="radio"] {
+  margin-bottom: 1rem;
+}
+
+.finalizacao input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--text-dark);
+  border-radius: 0.25rem;
+}
+
+.finalizacao button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--tertiary-color);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.finalizacao button:hover {
+  background-color: var(--primary-color);
+}
+
+
+
+
+
+
 .btn {
   padding: 1rem 1.5rem;
   outline: none;
@@ -263,6 +346,7 @@ nav {
   margin-bottom: 2rem;
   filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.3));
 }
+
 
 .order__card h4 {
   margin-bottom: 1rem;

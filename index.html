@@ -82,6 +82,7 @@
             Sink your teeth into the timeless perfection of our Chicken Burger,
             an experience that never goes out of style.
           </p>
+          <p class="item-price" data-price="10.99">Price: R$10.99</p>
           <button class="btn">ORDER NOW</button>
         </div>
         <div class="order__card">
@@ -91,6 +92,7 @@
             Embrace the vibrant flavors of our Veggie Delight Burger, a
             celebration of freshness and wholesome goodness.
           </p>
+          <p class="item-price" data-price="22.99">Price: R$22.99</p>
           <button class="btn">ORDER NOW</button>
         </div>
         <div class="order__card">
@@ -100,6 +102,11 @@
             Indulge in a symphony of smoky, savory flavors with our BBQ Bacon
             Burger, grilled and topped with crispy bacon.
           </p>
+          <div>
+            <span class="item-price" data-price="15.00">R$ 15.00</span> <br> <br>
+            <input type="number" id="quantity1" name="quantity" min="1" value="1" class="item-quantity"> 
+          </div>
+          <br>
           <button class="btn">ORDER NOW</button>
         </div>
       </div>
@@ -128,7 +135,7 @@
     <section class="reservation" id="contact">
       <div class="section__container reservation__container">
         <h3>RESERVATION</h3>
-        <h2 class="section__header">BOOK YOUR TABLE</h2>
+        <h2 class="section__header">RESERVE SUA MESA</h2>
         <form action="/">
           <input type="text" placeholder="NAME" />
           <input type="email" placeholder="EMAIL" />
@@ -148,6 +155,32 @@
         alt="reservation"
         class="reservation__bg-2"
       />
+
+      <!-- Seção de Carrinho de Compras -->
+      <div class="carrinho">
+        <h2>Carrinho de Compras</h2>
+        <div class="cart-items"></div> <!-- Contêiner para os itens -->
+        <p class="total">Total: R$ <span id="total-price">0.00</span></p>
+      </div>
+      
+
+  <!-- Seção de Finalização do Pedido -->
+  <div class="finalizacao">
+      <h2>Finalização do Pedido</h2>
+      <p>Escolha a forma de pagamento:</p>
+      <input type="radio" id="card" name="payment" value="Cartão" checked>
+      <label for="card">Cartão (Débito/Crédito)</label><br>
+      <input type="radio" id="pix" name="payment" value="pix">
+      <label for="pix">Pix</label>
+
+      <p>Nome Completo:</p>
+      <input type="text" id="full-name" name="full-name">
+
+      <p>Endereço para entrega:</p>
+      <input type="text" id="address" name="address">
+
+      <button onclick="finalizarPedido()">Finalizar Pedido</button>
+  </div>
     </section>
 
     <footer class="footer">
