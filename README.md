@@ -1,2 +1,2 @@
-# PROJETO AV1 FACULDADE
- este projeto consiste em uma avalição da faculdade de criação de um cardapio digital 
+# Burger_House_06-03-24
+Learn how to create a stunning restaurant website from scratch using HTML, CSS, and JavaScript!
