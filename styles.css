@@ -17,6 +17,7 @@
   box-sizing: border-box;
 }
 
+
 .section__container {
   max-width: var(--max-width);
   margin: auto;
@@ -347,6 +348,13 @@ nav {
   filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.3));
 }
 
+ .item-price {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: var(--header-font-2);
+  color: var(--text-dark);
+}
 
 .order__card h4 {
   margin-bottom: 1rem;
