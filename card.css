@@ -15,11 +15,20 @@ body {
   top: 50%;
   left: 50%;
   background-color: #ffffff;
-  width: 500px;
+  width: 600px;
   max-width: 90%;
   padding: 3em;
   border-radius: 1em;
   perspective: 800px;
+}
+
+.final{
+  top: 50%;
+}
+
+.pix{
+  display: flex;
+  align-items: center;
 }
 
 .credit-card {
@@ -30,6 +39,8 @@ body {
   transform-style: preserve-3d;
   transition: 0.3s;
 }
+
+
 
 .card-front,
 .card-back {
