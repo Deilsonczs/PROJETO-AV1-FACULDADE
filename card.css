@@ -22,9 +22,44 @@ body {
   perspective: 800px;
 }
 
-.final{
-  top: 50%;
+.final {
+  display: block;
+  margin: 2em auto;
+  padding: 0.5em 2em;
+  background-color: #206df9;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
+
+.final:hover {
+  background-color: #1a5bcc;
+}
+
+ a {
+  text-decoration: none;
+}
+
+.home {
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em 1em;
+  background-color: #f94b20;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home:hover {
+  background-color: #f94b20;
+}
+
 
 .pix{
   display: flex;

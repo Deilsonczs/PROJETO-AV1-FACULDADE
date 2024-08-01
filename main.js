@@ -58,22 +58,79 @@ orderButtons.forEach((button) => {
   });
 });
 
-
-
 function finalizarPedido() {
   const nome = document.getElementById('full-name').value;
   const endereco = document.getElementById('address').value;
   const pagamento = document.querySelector('input[name="payment"]:checked').value;
   const total = document.getElementById('total-price').textContent;
+
   if (!nome || !endereco) {
-      alert('Por favor, preencha todos os campos de contato.');
-      return;
+    Swal.fire({
+      title: 'Atenção',
+      text: 'Por favor, preencha todos os campos de contato.',
+      icon: 'warning',
+      confirmButtonText: 'OK'
+    });
+    return;
   }
-  alert(`Pedido finalizado com sucesso!\n\nNome: ${nome}\nEndereço: ${endereco}\nPagamento: ${pagamento}\nTotal: R$ ${total}`);
+
+  Swal.fire({
+    title: 'Confirmar Pedido',
+    html: `
+      <p><strong>Nome:</strong> ${nome}</p>
+      <p><strong>Endereço:</strong> ${endereco}</p>
+      <p><strong>Pagamento:</strong> ${pagamento}</p>
+      <p><strong>Total:</strong> R$ ${total}</p>
+    `,
+    icon: 'info',
+    showCancelButton: true,
+    confirmButtonText: 'Está tudo ok!',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Redirecionar para outra página ou processar o pedido
+      window.location.href = 'pagamento_card.html'; // Altere para a URL desejada
+    }
+  });
 }
 
 
+document.getElementById('reservation-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Previne o envio padrão do formulário
 
+  // Captura os dados do formulário
+  const name = document.getElementById('reservation-name').value;
+  const email = document.getElementById('reservation-email').value;
+  const date = document.getElementById('reservation-date').value;
+  const time = document.getElementById('reservation-time').value;
+  const people = document.getElementById('reservation-people').value;
+
+  // Exibe o alerta de confirmação
+  Swal.fire({
+    title: 'Confirme sua Reserva',
+    html: `
+      <p><strong>Nome:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Data:</strong> ${date}</p>
+      <p><strong>Hora:</strong> ${time}</p>
+      <p><strong>Pessoas:</strong> ${people}</p>
+    `,
+    icon: 'info',
+    showCancelButton: true,
+    confirmButtonText: 'Está tudo ok!',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Exibe o alerta de agradecimento
+      Swal.fire({
+        title: 'Reserva Confirmada!',
+        text: 'Obrigado por reservar uma mesa conosco. Estamos ansiosos para recebê-lo!',
+        icon: 'success'
+      });
+
+    }
+  });
+});
 
 
 

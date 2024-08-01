@@ -7,8 +7,11 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/6d6da36ec7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>Web Design Mastery | Burger House</title>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>AV1 | Burger House</title>
   </head>
   <body>
     <header class="header">
@@ -34,35 +37,35 @@
         </div>
         <ul class="nav__links" id="nav-links">
           <li><a href="#home">HOME</a></li>
-          <li><a href="#special">SPECIAL</a></li>
+          <li><a href="#special">ESPECIAL</a></li>
           <li><a href="#menu">MENU</a></li>
-          <li><a href="#event">EVENTS</a></li>
-          <li><a href="#contact">CONTACT US</a></li>
+          <li><a href="#event">EVENTOS</a></li>
+          <li><a href="#contact">RESERVA DE MESAS</a></li>
         </ul>
       </nav>
       <div class="section__container header__container" id="home">
         <div class="header__image">
-          <img src="assets/header.png" alt="header" />
+          <img src="assets/s3-Lanche-4-ajuste.png" alt="header" />
         </div>
         <div class="header__content">
-          <h2>IT IS GOOD TIME FOR THE GREATE TASTE OF BURGER</h2>
-          <h1>BURGER<br /><span>WEEK</span></h1>
+          <h2>É UM BOM MOMENTO PARA O GRANDE SABOR DO HAMBÚRGUER</h2>
+          <h1>SEMANA<br /><span> DO HAMBÚRGUER</span></h1>
         </div>
       </div>
     </header>
 
     <section class="section__container banner__container" id="special">
       <div class="banner__card">
-        <p>TRY IT OUT TODAY</p>
-        <h4>MOST POPULAR BURGER</h4>
+        <p>EXPERIMENTE HOJE MESMO</p>
+        <h4> O HAMBÚRGUER MAIS POPULAR</h4>
       </div>
       <div class="banner__card">
-        <p>TRY IT OUT TODAY</p>
-        <h4>MORE FUN<br />MORE TASTE</h4>
+        <p>EXPERIMENTE HOJE MESMO</p>
+        <h4>MAIS DIVERSÃO <br />MAIS SABOR</h4>
       </div>
       <div class="banner__card">
-        <p>TRY IT OUT TODAY</p>
-        <h4>FRESH & CHILI</h4>
+        <p>EXPERIMENTE HOJE MESMO</p>
+        <h4>FRESCO E PICANTE</h4>
       </div>
 
     </section>
@@ -73,50 +76,47 @@
       <h3>HAMBÚRGUER SEMPRE SABOROSO</h3>
       <h2 class="section__header">ESCOLHA E APRECIE</h2>
       <p class="section__description">
-        Não importa se você deseja sabores clássicos ou combinações ousadas, é aqui que sua jornada culinária começa. Satisfaça seus desejos e saboreie cada mordida enquanto cria sua experiência de hambúrguer personalizada com a Burger Company.
+        Não importa se você deseja sabores clássicos ou combinações ousadas, é aqui que sua jornada culinária começa. Satisfaça seus desejos e saboreie cada mordida enquanto cria sua experiência de hambúrguer personalizada com a Burger House.
       </p>
       <div class="order__grid">
         <div class="order__card">
           <img src="assets/order-1.png" alt="order" />
           <h4>Chicken Burger</h4>
           <p>
-            Sink your teeth into the timeless perfection of our Chicken Burger,
-            an experience that never goes out of style.
+            Experimente a perfeição atemporal do nosso hambúrguer de frango, uma experiência que nunca sai de moda.
           </p>
           <div>
             <span class="item-price"  data-price="20.00">R$ 20.00</span> <br> <br>
             <input type="number" id="quantity1" name="quantity" min="1" value="1" class="item-quantity"> 
           </div>
           <br>
-          <button class="btn">ORDER NOW</button>
+          <button class="btn"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao carrinho</button>
         </div>
         <div class="order__card">
           <img src="assets/order-2.png" alt="order" />
           <h4>Veggie Delight Burger</h4>
           <p>
-            Embrace the vibrant flavors of our Veggie Delight Burger, a
-            celebration of freshness and wholesome goodness.
+            Aprecie os sabores vibrantes do nosso Veggie Delight Burger, uma celebração do frescor e da saúde.
           </p>
           <div>
             <span class="item-price" data-price="15.00">R$ 15.00</span> <br> <br>
             <input type="number" id="quantity1" name="quantity" min="1" value="1" class="item-quantity"> 
           </div>
           <br>
-          <button class="btn">ORDER NOW</button>
+          <button class="btn"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao carrinho</button>
         </div>
         <div class="order__card">
           <img src="assets/hamburger.png" alt="order" />
           <h4>BBQ Bacon Burger</h4>
           <p>
-            Indulge in a symphony of smoky, savory flavors with our BBQ Bacon
-            Burger, grilled and topped with crispy bacon.
+            Delicie-se com uma sinfonia de sabores com nosso hambúrguer de bacon com churrasco, coberto com bacon crocante.
           </p>
           <div>
             <span class="item-price" data-price="12.99">R$ 12.99</span> <br> <br>
             <input type="number" id="quantity1" name="quantity" min="1" value="1" class="item-quantity"> 
           </div>
           <br>
-          <button class="btn">ORDER NOW</button>
+          <button class="btn"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao carrinho</button>
         </div>
       </div>
     </section>
@@ -124,53 +124,51 @@
     <!-- SEÇÃO DOS SALGADOS -->
 
     <section class="section__container order__container" id="menu">
-      <h3>HAMBÚRGUER SEMPRE SABOROSO</h3>
+      <h3>LANCHES ESPECIAIS E DELICIOSOS</h3>
       <h2 class="section__header">ESCOLHA E APRECIE</h2>
       <p class="section__description">
-        Não importa se você deseja sabores clássicos ou combinações ousadas, é aqui que sua jornada culinária começa. Satisfaça seus desejos e saboreie cada mordida enquanto cria sua experiência de hambúrguer personalizada com a Burger Company.
+        Para aquele lanche rápido, ou compartilhar com os amigos. Satisfaça seus desejos e saboreie cada mordida enquanto cria sua experiência personalizada com a Burger house.
       </p>
       <div class="order__grid">
         <div class="order__card">
           <img src="assets/pastel.png" alt="order" />
-          <h4>Chicken Burger</h4>
+          <h4>Pastel de Carne</h4>
           <p>
-            Sink your teeth into the timeless perfection of our Chicken Burger,
-            an experience that never goes out of style.
+            Experimente hoje mesmo a perfeição do nosso pastel de carne, que nunca sai de moda do cardapio brasileiro. 
           </p>
           <div>
-            <span class="item-price"  data-price="20.00">R$ 20.00</span> <br> <br>
+            <span class="item-price"  data-price="5.00">R$ 5.00</span> <br> <br>
             <input type="number" id="quantity1" name="quantity" min="1" value="1" class="item-quantity"> 
           </div>
           <br>
-          <button class="btn">ORDER NOW</button>
+          <button class="btn"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao carrinho</button>
         </div>
         <div class="order__card">
           <img src="assets/coxinha-removebg-preview.png" alt="order" />
-          <h4>Veggie Delight Burger</h4>
+          <h4>Coxinha de Frango</h4>
           <p>
-            Embrace the vibrant flavors of our Veggie Delight Burger, a
-            celebration of freshness and wholesome goodness.
+            Uma clássica comida Brasileira, a coxinha envolve um recheio com carne de frango entre outros Experimente.
           </p>
           <div>
-            <span class="item-price" data-price="15.00">R$ 15.00</span> <br> <br>
+            <span class="item-price" data-price="6.50">R$ 6.50</span> <br> <br>
             <input type="number" id="quantity1" name="quantity" min="1" value="1" class="item-quantity"> 
           </div>
           <br>
-          <button class="btn">ORDER NOW</button>
+          <button class="btn"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao carrinho</button>
         </div>
         <div class="order__card">
           <img src="assets/pizza.png" alt="order" />
-          <h4>BBQ Bacon Burger</h4>
+          <h4>
+            Pizza de Calabreza</h4>
           <p>
-            Indulge in a symphony of smoky, savory flavors with our BBQ Bacon
-            Burger, grilled and topped with crispy bacon.
+            Uma deliciosa combinação de Linguiça Calabresa, cebolas, mussarela, polpa de tomate, garante um sabor único.
           </p>
           <div>
-            <span class="item-price" data-price="12.99">R$ 12.99</span> <br> <br>
+            <span class="item-price" data-price="30.99">R$ 30.99</span> <br> <br>
             <input type="number" id="quantity1" name="quantity" min="1" value="1" class="item-quantity"> 
           </div>
           <br>
-          <button class="btn">ORDER NOW</button>
+          <button class="btn"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao carrinho</button>
         </div>
       </div>
     </section>
@@ -178,53 +176,50 @@
      <!-- SEÇÃO DAS BEBIDAS -->
 
     <section class="section__container order__container" id="menu">
-      <h3>HAMBÚRGUER SEMPRE SABOROSO</h3>
+      <h3>A COMBINAÇÃO PERFEITA PARA SEU PEDIDO</h3>
       <h2 class="section__header">ESCOLHA E APRECIE</h2>
       <p class="section__description">
-        Não importa se você deseja sabores clássicos ou combinações ousadas, é aqui que sua jornada culinária começa. Satisfaça seus desejos e saboreie cada mordida enquanto cria sua experiência de hambúrguer personalizada com a Burger Company.
+        Que tal incrementar seu lanche? Além de utilizarmos os melhores ingredientes, oferecemos adicionais para deixar sua refeição ainda mais gostosa. saboreie com refrigerentes ou bebidas de qualidade enquanto cria sua experiência de hambúrguer personalizada com a Burger Company.
       </p>
       <div class="order__grid">
         <div class="order__card">
           <img src="assets/Coca-Cola-PNG-Picture.png" alt="order" />
           <h4>Coca-cola lata 350ml</h4>
           <p>
-            Sink your teeth into the timeless perfection of our Chicken Burger,
-            an experience that never goes out of style.
+            A Coca-Cola é uma bebida clássica que combina perfeitamente com lanches. Prove o sabor adocicado e refrescante.
           </p>
           <div>
-            <span class="item-price"  data-price="20.00">R$ 20.00</span> <br> <br>
+            <span class="item-price"  data-price="5.00">R$ 5.00</span> <br> <br>
             <input type="number" id="quantity1" name="quantity" min="1" value="1" class="item-quantity"> 
           </div>
           <br>
-          <button class="btn">ORDER NOW</button>
+          <button class="btn"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao carrinho</button>
         </div>
         <div class="order__card">
           <img src="assets/redbul.png" alt="order" />
-          <h4>Veggie Delight Burger</h4>
+          <h4>Red bull lata 250ml</h4>
           <p>
-            Embrace the vibrant flavors of our Veggie Delight Burger, a
-            celebration of freshness and wholesome goodness.
+            Red Bull Energy Drink e um energetico alta qualidade, Vitaminas do grupo B. Experimente.
           </p>
           <div>
-            <span class="item-price" data-price="15.00">R$ 15.00</span> <br> <br>
+            <span class="item-price" data-price="10.00">R$ 10.00</span> <br> <br>
             <input type="number" id="quantity1" name="quantity" min="1" value="1" class="item-quantity"> 
           </div>
           <br>
-          <button class="btn">ORDER NOW</button>
+          <button class="btn"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao carrinho</button>
         </div>
         <div class="order__card">
           <img src="assets/pepsi-removebg-preview.png" alt="order" />
-          <h4>BBQ Bacon Burger</h4>
+          <h4>Pepsi lata 350ml</h4>
           <p>
-            Indulge in a symphony of smoky, savory flavors with our BBQ Bacon
-            Burger, grilled and topped with crispy bacon.
+            Pepsi é um refrigerante tradicional a combinação perfeita com seu pedido. Prove o sabor único e delicioso.
           </p>
           <div>
-            <span class="item-price" data-price="12.99">R$ 12.99</span> <br> <br>
+            <span class="item-price" data-price="3.99">R$ 3.99</span> <br> <br>
             <input type="number" id="quantity1" name="quantity" min="1" value="1" class="item-quantity"> 
           </div>
           <br>
-          <button class="btn">ORDER NOW</button>
+          <button class="btn"><i class="fa-solid fa-cart-shopping"></i> Adicionar ao carrinho</button>
         </div>
       </div>
     </section>
@@ -235,15 +230,10 @@
           <img src="assets/event.png" alt="event" />
         </div>
         <div class="event__details">
-          <h3>Discover</h3>
-          <h2 class="section__header">UPCOMING EVENTS</h2>
+          <h3>Descobrir</h3>
+          <h2 class="section__header">NOSSOS EVENTOS</h2>
           <p class="section__description">
-            From exclusive burger tastings and chef collaborations to community
-            outreach initiatives and seasonal celebrations, there's always
-            something special on the horizon at Burger Company. Be the first to
-            know about our upcoming events, promotions, and gatherings as we
-            continue to bring joy and flavor to our cherished customers. Join us
-            in creating memorable moments and delicious memories together!
+            De degustações exclusivas de hambúrgueres e colaborações de chefs a iniciativas de alcance comunitário e celebrações sazonais, sempre há algo especial no horizonte na Burger House. Seja o primeiro a saber sobre nossos próximos eventos, promoções e encontros, enquanto continuamos a levar alegria e sabor aos nossos queridos clientes. Junte-se a nós para criar momentos memoráveis e memórias deliciosas juntos!
           </p>
         </div>
       </div>
@@ -251,15 +241,15 @@
 
     <section class="reservation" id="contact">
       <div class="section__container reservation__container">
-        <h3>RESERVATION</h3>
+        <h3>RESERVA</h3>
         <h2 class="section__header">RESERVE SUA MESA</h2>
-        <form action="/">
-          <input type="text" placeholder="NAME" />
-          <input type="email" placeholder="EMAIL" />
-          <input type="date" placeholder="DATE" />
-          <input type="time" placeholder="TIME" />
-          <input type="number" placeholder="PEOPLE" />
-          <button class="btn" type="submit">FIND TABLE</button>
+        <form id="reservation-form" action="javascript:void(0);">
+          <input type="text" id="reservation-name" placeholder="NOME" required />
+          <input type="email" id="reservation-email" placeholder="EMAIL" required />
+          <input type="date" id="reservation-date" placeholder="DATA" required />
+          <input type="time" id="reservation-time" placeholder="HORA" required />
+          <input type="number" id="reservation-people" placeholder="Nº PESSOAS" required />
+          <button class="btn" type="submit">RESERVAR</button>
         </form>
       </div>
       <img
@@ -291,19 +281,19 @@
       <label for="pix">Pix</label>
 
       <p>Nome Completo:</p>
-      <input type="text" id="full-name" name="full-name">
+      <input type="text" id="full-name" name="full-name" required>
 
       <p>Endereço para entrega:</p>
-      <input type="text" id="address" name="address">
+      <input type="text" id="address" name="address" required>
 
-      <button onclick="finalizarPedido()">Finalizar Pedido</button>
+      <button onclick="finalizarPedido()">FINALIZAR PEDIDO</button>
   </div>
     </section>
 
     <footer class="footer">
       <div class="section__container footer__container">
         <div class="footer__logo">
-          <img src="assets/logo-white.png" alt="logo" />
+          <img src="assets/logou.png" alt="logo" />
         </div>
         <div class="footer__content">
           <p>

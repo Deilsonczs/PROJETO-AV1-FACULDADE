@@ -76,3 +76,17 @@ window.onload = () => {
   cardNameInput.value = "";
   cardNumber.value = "";
 };
+
+document.querySelector('.final').addEventListener('click', function() {
+  Swal.fire({
+    title: 'Compra Aprovada!',
+    text: 'Sua entrega está a caminho.',
+    imageUrl: 'assets/entregador.png',
+    imageWidth: 100,
+    imageHeight: 100,
+    imageAlt: 'Entregador de fast food',
+    confirmButtonText: 'OK'
+  });
+});
+
+
