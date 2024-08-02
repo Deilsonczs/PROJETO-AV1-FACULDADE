@@ -118,11 +118,6 @@ cursor:pointer;
   background-color: var(--primary-color);
 }
 
-
-
-
-
-
 .btn {
   padding: 1rem 1.5rem;
   outline: none;
@@ -436,8 +431,29 @@ nav {
   background-repeat: no-repeat;
 }
 
-.footer__logo img {
+
+.footer__logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Centraliza o texto dentro do parágrafo */
+  margin: 0 auto; /* Centraliza a div horizontalmente na página */
+
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--header-font-2);
+  color: var(--text-dark);
+}
+
+.footer__logos img {
+  margin-bottom: 10px; /* Adiciona espaço entre a imagem e o parágrafo */
   max-width: 250px;
+}
+
+
+.footer__logo img {
+  max-width: 150px;
 }
 
 .footer__content {

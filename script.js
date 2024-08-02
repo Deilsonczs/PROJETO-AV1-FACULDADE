@@ -7,6 +7,7 @@ const cardNumberDisplay = document.querySelectorAll(".card-number-display");
 const cvvInput = document.getElementById("cvv");
 const cvvDisplay = document.getElementById("cvv-display");
 let currentSpanIndex = 0;
+
 cardNumber.addEventListener("input", () => {
   const inputNumber = cardNumber.value.replace(/\D/g, "");
   cardNumber.value = cardNumber.value.slice(0, 16).replace(/\D/g, "");
@@ -27,7 +28,7 @@ cardNumber.addEventListener("input", () => {
 
 cardNameInput.addEventListener("input", () => {
   if (cardNameInput.value.length < 1) {
-    cardHolderName.innerText = "Your Name Here";
+    cardHolderName.innerText = "Seu Nome Aqui";
   } else if (cardNameInput.value.length > 30) {
     cardNameInput.value = cardNameInput.value.slice(0, 30);
   } else {
@@ -38,19 +39,19 @@ cardNameInput.addEventListener("input", () => {
 validityInput.addEventListener("input", () => {
   const inputString = validityInput.value;
   if (inputString.length < 1) {
-    displayValidity.innerText = "06/28";
+    displayValidity.innerText = "00/00";
     return false;
   }
   const parts = inputString.split("-");
   const year = parts[0].slice(2);
   const month = parts[1];
 
-  //Final formatted string
+  // Final formatted string
   const formattedString = `${month}/${year}`;
   displayValidity.innerText = formattedString;
 });
 
-//cvv
+// CVV
 cvvInput.addEventListener("input", () => {
   const userInput = cvvInput.value;
   const sanitizedInput = userInput.slice(0, 3);
@@ -59,11 +60,11 @@ cvvInput.addEventListener("input", () => {
   cvvDisplay.innerText = numericInput;
 });
 
-//Flip
+// Flip card
 cvvInput.addEventListener("click", () => {
   document.getElementById("card").style.transform = "rotateY(180deg)";
 });
-//Reflip card
+// Reflip card
 document.addEventListener("click", () => {
   if (document.activeElement.id != "cvv") {
     document.getElementById("card").style.transform = "rotateY(0deg)";
@@ -77,16 +78,31 @@ window.onload = () => {
   cardNumber.value = "";
 };
 
-document.querySelector('.final').addEventListener('click', function() {
+// Show preload
+function showPreload() {
   Swal.fire({
-    title: 'Compra Aprovada!',
-    text: 'Sua entrega está a caminho.',
-    imageUrl: 'assets/entregador.png',
-    imageWidth: 100,
-    imageHeight: 100,
-    imageAlt: 'Entregador de fast food',
-    confirmButtonText: 'OK'
+    title: 'Verificando dados do cartão...',
+    allowOutsideClick: false,
+    didOpen: () => {
+      Swal.showLoading();
+    }
   });
+}
+
+document.querySelector('.final').addEventListener('click', function() {
+  showPreload();
+
+  setTimeout(() => {
+    Swal.fire({
+      title: 'Compra Aprovada!',
+      text: 'Sua entrega está a caminho.',
+      imageUrl: 'assets/entregador.png',
+      imageWidth: 100,
+      imageHeight: 100,
+      imageAlt: 'Entregador de fast food',
+      confirmButtonText: 'OK'
+    }).then(() => {
+      window.location.href = 'index.html';
+    });
+  }, 5000); // Espera 5 segundos antes de mostrar o alerta de compra aprovada
 });
-
-
