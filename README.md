@@ -16,11 +16,11 @@ Este projeto foi desenvolvido especialmente para a AV1 da disciplina de Usabilid
 
 1. Clone o repositório:
     ```sh
-    git clone https://github.com/usuario/nome-do-repositorio.git
+    git clone https://github.com/Deilsonczs/PROJETO-AV1-FACULDADE.git
     ```
 2. Navegue até o diretório do projeto:
     ```sh
-    cd nome-do-repositorio
+    cd PROJETO-AV1-FACULDADE
     ```
 3. Abra o arquivo `index.html` em um navegador web.
 
