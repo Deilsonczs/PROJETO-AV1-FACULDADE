@@ -11,105 +11,98 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet" />
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="card.css" />
 
-      <!-- Favicon -->
-      <link rel="shortcut icon" href="hamburger-icon.ico" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="hamburger-icon.ico" type="image/x-icon">
     
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-  <body>
-    
+<body>
     <div class="wrapper">
-     
-      <div class="credit-card" id="card">
-        <div class="card-front">
-          <div class="branding">
-            <img src="assets/chip.png" class="chip-img" />
-            <img src="assets/visa.png" class="visa-logo" />
-          </div>
-          <div class="card-number">
-            <div>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
+        <div class="credit-card" id="card">
+            <div class="card-front">
+                <div class="branding">
+                    <img src="assets/chip.png" class="chip-img" />
+                    <img src="assets/visa.png" class="visa-logo" />
+                </div>
+                <div class="card-number">
+                    <div>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                    </div>
+                    <div>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                    </div>
+                    <div>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                    </div>
+                    <div>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                        <span class="card-number-display">_</span>
+                    </div>
+                </div>
+                <div class="details">
+                    <div>
+                        <span>Titular do cartão</span>
+                        <span id="card-holder-name">Seu Nome Aqui</span>
+                    </div>
+                    <div>
+                        <span>Validade</span>
+                        <span id="validity">00/00</span>
+                    </div>
+                </div>
             </div>
-            <div>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
+            <div class="card-back">
+                <div class="black-strip"></div>
+                <div class="white-strip">
+                    <span>CVC</span>
+                    <div id="cvv-display"></div>
+                </div>
+                <img src="assets/visa.png" class="visa-logo" />
             </div>
-            <div>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
-            </div>
-            <div>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
-              <span class="card-number-display">_</span>
-            </div>
-          </div>
-          <div class="details">
-            <div>
-              <span>Titular do cartao</span>
-              <span id="card-holder-name">Seu Nome Aqui</span>
-            </div>
-            <div>
-              <span>Validade</span>
-              <span id="validity">00/00</span>
-            </div>
-          </div>
         </div>
-        <div class="card-back">
-          <div class="black-strip"></div>
-          <div class="white-strip">
-            <span>CVC</span>
-            <div id="cvv-display"></div>
-          </div>
-          <img src="assets/visa.png" class="visa-logo" />
-        </div>
-      </div>
-      <form>
-        <label for="card-number">Numero do cartao:</label>
-        <input type="number" id="card-number" placeholder="0000 0000 0000 0000" />
+        <form>
+            <label for="card-number">Número do cartão:</label>
+            <input type="number" id="card-number" placeholder="0000 0000 0000 0000" />
 
-        <label for="card-holder">Titular do cartao:</label>
-        <input type="text" id="card-name-input" placeholder="Digite Seu Nome Aqui" />
+            <label for="card-holder">Titular do cartão:</label>
+            <input type="text" id="card-name-input" placeholder="Digite Seu Nome Aqui" />
 
-        <div class="date-cvv">
-          <div>
-            <label for="validity">Validade:</label>
-            <input type="date" id="validity-input" />
-          </div>
-          <div>
-            <label for="cvv">CVC:</label>
-            <input type="number" id="cvv" placeholder="***" />
-          </div>
+            <div class="date-cvv">
+                <div>
+                    <label for="validity">Validade:</label>
+                    <input type="date" id="validity-input" />
+                </div>
+                <div>
+                    <label for="cvv">CVC:</label>
+                    <input type="number" id="cvv" placeholder="***" />
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="pix">
+            <h4>Se preferir, escaneie o código ao lado e pague com Pix</h4>
+            <img src="assets/QR_code_for_mobile_English_Wikipedia.svg.png" width="150" height="150" alt="QR Code">
         </div>
-      </form> <br>
-      <div class="pix">
-        <h4>se preferir escaneie o codigo ao lado e pague com pix</h4>
-        <img src="assets/QR_code_for_mobile_English_Wikipedia.svg.png" width="150" height="150" alt="qr code">
-        
-      </div>
-      <div class="card-banner">
-        <img src="assets/Artspot_formasdepagamento2.webp" width="341" height="50" alt="logo validex">
-        </div>
-        <button class="final" >finalizar compra</button>
+       
+        <button class="final">Finalizar compra</button>
     </div>
     <!-- Script -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

@@ -56,6 +56,13 @@
           <li><a href="#contact">RESERVA DE MESAS</a></li>
         </ul>
       </nav>
+      <div class="cart-icon-container">
+        <i class="ri-shopping-cart-line"></i>
+        <span class="cart-icon-badge">0</span>
+      </div>
+      
+      <div id="alert-container"></div>
+
       <div class="section__container header__container" id="home">
         <div class="header__image">
           <img src="assets/s3-Lanche-4-ajuste.png" alt="header" />
@@ -277,7 +284,7 @@
       />
 
       <!-- Seção de Carrinho de Compras -->
-      <div class="carrinho">
+      <div id="cart-section" class="carrinho">
         <h2>Carrinho de Compras</h2>
         <div class="cart-items"></div> <!-- Contêiner para os itens -->
         <p class="total">Total: R$ <span id="total-price">0.00</span></p>

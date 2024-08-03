@@ -1,3 +1,13 @@
+// Função para rolar suavemente até a seção do carrinho
+function scrollToCarrinho() {
+  const cartSection = document.getElementById('cart-section');
+  cartSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Adicionar evento de clique ao ícone do carrinho
+const cartIcon = document.querySelector('.cart-icon-container');
+cartIcon.addEventListener('click', scrollToCarrinho);
+
 // Função para calcular o total do carrinho
 function calcularTotal() {
   let total = 0;
@@ -10,6 +20,30 @@ function calcularTotal() {
   });
 
   document.getElementById('total-price').textContent = total.toFixed(2);
+}
+
+// Função para atualizar a quantidade de itens no ícone do carrinho
+function atualizarQuantidadeCarrinho() {
+  const cartItems = document.querySelectorAll('.cart-item');
+  let totalQuantity = 0;
+
+  cartItems.forEach(item => {
+    totalQuantity += parseInt(item.dataset.quantity);
+  });
+
+  document.querySelector('.cart-icon-badge').textContent = totalQuantity;
+}
+
+// Função para mostrar um alerta temporário
+function showAlert(message) {
+  const alertBox = document.createElement('div');
+  alertBox.className = 'temporary-alert';
+  alertBox.textContent = message;
+  document.body.appendChild(alertBox);
+
+  setTimeout(() => {
+    alertBox.remove();
+  }, 3000); // Alerta será removido após 3 segundos
 }
 
 // Função para adicionar itens ao carrinho
@@ -41,6 +75,12 @@ function adicionarAoCarrinho(name, price, quantity) {
 
   // Atualizar o total do carrinho
   calcularTotal();
+
+  // Atualizar a quantidade de itens no ícone do carrinho
+  atualizarQuantidadeCarrinho();
+
+  // Mostrar alerta temporário
+  showAlert('Ícone adicionado ao carrinho');
 }
 
 // Adicionar evento para o botão "ORDER NOW"
@@ -94,7 +134,6 @@ function finalizarPedido() {
   });
 }
 
-
 document.getElementById('reservation-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Previne o envio padrão do formulário
 
@@ -127,12 +166,9 @@ document.getElementById('reservation-form').addEventListener('submit', function(
         text: 'Obrigado por reservar uma mesa conosco. Estamos ansiosos para recebê-lo!',
         icon: 'success'
       });
-
     }
   });
 });
-
-
 
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
