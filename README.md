@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Este projeto foi desenvolvido especialmente para a AV1 da disciplina de Usabilidade e Interface Homem-Máquina. O objetivo é criar uma interface de usuário intuitiva e acessível para um sistema de cardápio digital interativo, destacando a importância de uma experiência de usuário positiva. O site inclui uma Apresentação do cardápio organizado os itens em categorias (ex: Hambúrgueres, Salgados, Bebidas)  cada item com nome, descrição breve e preço. Formulário de cartão de crédito interativo, bem como uma opção de pagamento via QR code (Pix) entre outras funcionalidades.
+Este projeto foi desenvolvido especialmente para a AV1 da disciplina de Usabilidade e Interface Homem-Máquina, do curso da Faculdade que estou realizando de Análise e Desenvolvimento de sistemas. O objetivo é criar uma interface de usuário intuitiva e acessível para um sistema de cardápio digital interativo, destacando a importância de uma experiência de usuário positiva. O site inclui uma Apresentação do cardápio organizado os itens em categorias (ex: Hambúrgueres, Salgados, Bebidas)  cada item com nome, descrição breve e preço. Formulário de cartão de crédito interativo, bem como uma opção de pagamento via QR code (Pix) entre outras funcionalidades.
 
 ## Tecnologias Utilizadas
 
